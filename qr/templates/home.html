@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/global.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+      <!-- CSS BOOTSTRAP -->
+    <link rel="shortcut icon" href="{% static  'img/logo2.png' %}">
+</head>
+<body>
+    <section style="height: 0vh;" id="nav">
+        <header>
+                <nav class="navbar bg-body-tertiary">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                        <img src="{% static 'img/logo2.png' %}" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+                            REGISTR QR
+                        </a>
+                        <div class="letra ms-auto">       
+                            <a href="{% url 'descargar' %}">DescargarAPP</a>
+                        </div>
+                    </div>
+                </nav>
+        </header>
+    <section ><br>
+
+
+   <!--USER-AGENT --> 
+    <div id="logoContainer">
+          <!--  <img id="logo" src="" alt="Logo"> --> 
+        <p id="infoNavegador">{{ browser_info  }}</p>
+    </div>
+    
+    <script>
+        // Accede al User-Agent desde JavaScript en el navegador
+        var userAgent = navigator.userAgent;
+        console.log("User-Agent:", userAgent);
+    </script>
+
+    <!---SLIDER DE INICIO -->
+    <div class="slider1">
+        <div class="slider">
+            <div class="slide-track">
+                <div class="slide">
+                    <img src="{% static  'img/1.png' %}" alt="">
+                </div>
+    
+                <div class="slide">
+                    <img src="{% static  'img/5.png' %}" alt="">
+                </div>
+    
+                <div class="slide">
+                    <img src="{% static  'img/2.png' %}" alt="">
+                </div>
+    
+                <div class="slide">
+                    <img src="{% static  'img/3.png' %}" alt="">
+                </div>
+                <div class="slide">
+                    <img src="{% static  'img/6.png' %}" alt="">
+                </div>
+                <div class="slide">
+                    <img src="{% static  'img/4.png' %}" alt="">
+                </div>
+            </div>
+            
+        </div><br>
+    </div>
+   
+        
+    <!---QUIENES SOMOS-->
+    <section class="margen"  id="quienesSomos">
+        <h1 class="p-3 fs-2 "> QUIENES  <span class="text-info"> SOMOS!</span></h1>
+        <p class="par"><span class="text-info">Registr Qr.</span>
+            Se presenta como una entidad especializada
+            en la prestación de servicios de asistencia a alumnos de 
+            instituciones educativas mediante la innovadora tecnología
+            de códigos QR.</p><br>
+    </section><br>
+       
+
+
+<!--PIE DE PAGINA-->
+    <section id="contacto">
+        <footer class="pie-pagina">
+            <div class="grupo-1">
+                <div class="box ">
+                    <h1 style="font-size: 2rem;">Descarga nuestra App</h1>
+                    <p >
+                        ¡ Y descubre cómo podemos hacer 
+                        que la gestión de la asistencia sea más fácil y 
+                        eficiente para todos!
+                    </p>
+                    <a  class="link" href="{% url 'descargar' %}"> Ir a descargar </a>
+                </div> 
+
+                <div class="redes-container" >
+                    <h2 style="font-size: 1rem;"> SIGUENOS EN NUESTRAS REDES SOCIALES </h2>
+                    <div class="red-social">
+                      <ul>
+                        <li><a href="" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="" class="instagram"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="" class="whatsapp"><i class="fab fa-whatsapp"></i></a></li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="grupo-2">
+                <small>&copy;2023 <b>Poly</b> </small>
+            </div>
+        </footer>
+        </section>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    </body>
+</html>

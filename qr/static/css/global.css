@@ -1,0 +1,360 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    background-image: url("../img/fondo2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+   
+}
+html{
+    scroll-behavior: smooth;
+}
+
+header a:hover {
+    color: rgb(106, 202, 240)
+}
+header{
+    /*font-variant:small-caps;*/
+    padding:0px;
+    z-index:170;
+    margin:0 auto;
+    border-bottom:1px solid #dadada;
+    width:100%;
+    /*para que el nav no desaparezca*/
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    text-align: center;
+
+}
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+
+    
+}
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: fixed;
+}
+
+
+
+.fondo {
+    border-radius: 10px;
+    height: auto;
+    background-color:  #ffffff;
+    margin-top: 110px;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+    text-align: center;
+    justify-content: center;
+   
+}
+
+.fondo0 {
+    border-radius: 10px;
+    height: 150px;
+    width: 100%;
+    background-color:  #ffffff;
+    margin-top: 40px;
+    padding: 5px;
+    margin-bottom: 30px;
+    
+    text-align: center;
+    justify-content: center;
+   
+}
+
+
+
+.margen {
+    background-color:   #ffffff;
+    border-radius: 10px;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 60px;
+    margin-left: 60px;
+    text-align: center;
+
+
+}.par{
+    font-size: 1.1rem;
+    margin-top: 15px;
+    padding: 10px 20px;
+    text-align: center;
+    display: block;
+   
+}
+#logoContainer {
+           background-color: #ffffff; ;
+           border-radius: 10px;
+            margin-top: 110px;
+            padding: 2px;
+            margin-bottom: 50px;
+            margin-left: 100px;
+            margin-right: 100px;
+            text-align: center;
+           
+        }
+
+/* SLIDER DE INICIO */
+
+.slider {
+    width: 70%;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    padding: 10px auto;
+    width: 80%;
+    
+}
+
+.slider1{
+    background: linear-gradient(to right, #74c5d5, #4d90a4); 
+    opacity: 0.85;
+    border-radius: 30px;
+    overflow: hidden;
+    padding: 10px auto;
+    height: 500px; /* Ajusta la altura según tus necesidades */
+    
+
+}
+
+.slider .slide-track {
+    display: flex;
+    animation: scroll 50s linear infinite;
+    width: calc(200px * 6);
+    -webkit-animation: scroll 50s linear infinite;;
+}
+
+.slider .slide{
+    width: 200px;
+ 
+    
+}
+.slider .slide img{
+    width: 100%;
+    margin-top: 50px;
+    border-radius: 24px;
+    padding: 8px;
+
+    
+}
+
+/* anima el slider*/
+@keyframes scroll {
+    0% {
+        -webkit-animation: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-animation: translateX(calc(-200px * 3));
+        transform: translateX(calc(-200px * 6));
+    }
+}
+
+
+/*FOOTER*/
+footer .container{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.pie-pagina{
+    width: 100%;
+    background-color: #f4f5f7;
+    border-radius: 30px;
+    
+}
+
+.pie-pagina2 {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 30px;
+
+}
+
+.centrar{
+    text-align: center;
+    justify-content: center;
+    padding: 10px 5px;
+    font-size: 1rem;
+    margin-left: 20px;
+
+}
+
+.grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    padding: 45px 0px;
+    justify-items: center;
+    align-items: center;
+
+
+}
+/* LOGO FOOTER*/
+.pie-pagina .grupo-1 .box h2{
+    color:#0dcaf0;
+    margin-bottom: 25px;
+    font-size: 15px;
+    text-align: center;
+    
+}
+.pie-pagina .grupo-1 .box h1{
+    color: #0dcaf0;
+    margin-bottom: 25px;
+    font-size: 15px;
+    text-align: center;
+    
+}
+
+.pie-pagina .grupo-1 .box p{
+    color: #090c0c;
+    margin-bottom: 20px;
+    padding: 5px;  
+    text-align: center;
+    margin-left: 30px;
+    margin-right: 55px;
+
+}
+
+.grupo-2{
+    background-color: #0a1a2a;
+    justify-items:center;
+    padding: 15px 10px;
+    text-align: center;
+    color: white;
+}
+.grupo-2 small{
+    font-size: 15px;
+    
+}
+
+
+/* PIE DE PAGINA CELULAR */
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+        width: 100%;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: 100%;
+        grid-gap: 20px;
+        padding: 20px 0px;
+    }
+
+    .pie-pagina2 .grupo-1{
+        width: 100%;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: 100%;
+        grid-gap: 20px;
+        padding: 20px 0px;
+    }
+}
+.redes-container h2{
+   color: #0dcaf0;
+   text-align: center;
+   justify-content: center;
+   padding: 10px ;
+
+
+   
+}
+.redes-container ul li{
+    display: inline-block;
+    margin: 0 5px;
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+    text-align: center; 
+   
+}
+
+
+.redes-container ul li a{
+    display: block;
+    padding: 0 10px;
+    background: #0a1a2a;
+    color: #f4f5f7;
+    line-height: 50px;
+    font-size: 18px;
+    box-shadow: 0 3px 5px 0px rgb(0,0,0,.2);
+    transition: .2s;
+    
+    
+}
+
+.redes-container ul:hover a {
+    filter: blur(2px)
+}
+
+
+.redes-container ul li a:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.4);
+    filter: none;
+}
+
+.redes-container ul li .facebook:hover{
+    background: var(--facebook);
+}
+.redes-container ul li .instagram:hover{
+    background: var(--instagram);
+}
+.redes-container ul li .whatsapp:hover{
+    background: var(--whatsapp);
+}
+
+
+:root{
+    --facebook: #3b5999;
+    --instagram: #e4405f;
+    --whatsapp: rgb(8, 88, 8); 
+}
+
+.redes-container .red-social {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.link {
+    text-align: center;
+    justify-content: center;
+    border: none;
+    text-decoration-line: underline;
+    background-color: transparent;
+    width: 90%;
+    margin-left: 20px;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    color: blue;
+    display: block;
+
+
+}
+
+#infoNavegador{
+
+    margin-top: auto;
+    
+}
